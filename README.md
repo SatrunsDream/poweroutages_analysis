@@ -1,1 +1,1 @@
-# Analysis of poweroutages from 2000-2016
+# Major Power Outage Events In The Continental U.S.
