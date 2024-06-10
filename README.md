@@ -1,5 +1,5 @@
 # Major Power Outage Events In The Continental U.S.
-By: Sardor Sobirov and Diego Arevelo 
+       By: Sardor Sobirov and Diego Arevelo 
 
 # Introduction
 In this project, we analyzed a dataset of significant power outages in the U.S. from January 2000 to July 2016. These major outages, as defined by the Department of Energy, impacted at least 50,000 customers or resulted in an unplanned energy demand loss of at least 300 megawatts. The dataset was obtained from Purdue University's Laboratory for Advancing Sustainable Critical Infrastructure (LASCI), available at https://engineering.purdue.edu/LASCI/research-data/outages.
@@ -40,7 +40,12 @@ The original raw DataFrame contains 1,534 rows, each representing an outage, and
 | `PCT_WATER_TOT`            | Percentage of water area in the U.S. state as compared to the overall water area in the continental U.S.       |
 | `PCT_WATER_INLAND`         | Percentage of inland water area in the U.S. state as compared to the overall inland water area in the continental U.S. |
 
+# Data Cleaning and Exploration
+The first step is to clean the data to ensure it is suitable for effective analysis. Data cleaning is crucial because it helps remove inconsistencies, errors, and inaccuracies that can skew results and lead to incorrect conclusions. As data scientists, cleaning the data allows us to work with reliable and accurate datasets, ensuring that our analyses are robust and our insights are valid. Proper data cleaning enhances the quality of our models and improves the overall integrity of our research.
 
-
+## Cleaning
+1.  We begin by dropping irrelevant columns and retaining only the features relevant to our analysis. The columns we keep are: MONTH, U.S._STATE, OUTAGE.START.DATE, OUTAGE.START.TIME, OUTAGE.RESTORATION.DATE, OUTAGE.RESTORATION.TIME, OUTAGE.DURATION, DEMAND.LOSS.MW, CAUSE.CATEGORY, CUSTOMERS.AFFECTED, CLIMATE.REGION, CLIMATE.CATEGORY, TOTAL.PRICE, TOTAL.SALES, TOTAL.CUSTOMERS, POPULATION, POPPCT_URBAN, POPPCT_UC, POPDEN_URBAN, POPDEN_UC, AREAPCT_URBAN, AREAPCT_UC, PCT_LAND, PCT_WATER_TOT, PCT_WATER_INLAND.
+2.  Next, we combine the OUTAGE.START.DATE and OUTAGE.START.TIME columns into a single OUTAGE.START column as a Timestamp object. We do the same for OUTAGE.RESTORATION.DATE and OUTAGE.RESTORATION.TIME, creating a OUTAGE.RESTORATION column. We then drop the old columns since all the relevant information is now contained in OUTAGE.START and OUTAGE.RESTORATION.
+3.  
 
 
