@@ -1,4 +1,5 @@
 # Major Power Outage Events In The Continental U.S.
+By: Sardor Sobirov and Diego Arevelo 
 
 # Introduction
 In this project, I analyzed a dataset of significant power outages in the U.S. from January 2000 to July 2016. These major outages, as defined by the Department of Energy, impacted at least 50,000 customers or resulted in an unplanned energy demand loss of at least 300 megawatts. The dataset was obtained from Purdue University's Laboratory for Advancing Sustainable Critical Infrastructure (LASCI), available at https://engineering.purdue.edu/LASCI/research-data/outages.
