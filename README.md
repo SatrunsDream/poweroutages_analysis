@@ -1,5 +1,11 @@
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+
 # Major Power Outage Events In The Continental U.S.
-       By: Sardor Sobirov and Diego Arevelo 
+By: Sardor Sobirov and Diego Arevelo 
 
 # Introduction
 In this project, we analyzed a dataset of significant power outages in the U.S. from January 2000 to July 2016. These major outages, as defined by the Department of Energy, impacted at least 50,000 customers or resulted in an unplanned energy demand loss of at least 300 megawatts. The dataset was obtained from Purdue University's Laboratory for Advancing Sustainable Critical Infrastructure (LASCI), available at https://engineering.purdue.edu/LASCI/research-data/outages.
@@ -45,7 +51,11 @@ The first step is to clean the data to ensure it is suitable for effective analy
 
 ## Cleaning
 1.  We begin by dropping irrelevant columns and retaining only the features relevant to our analysis. The columns we keep are: MONTH, U.S._STATE, OUTAGE.START.DATE, OUTAGE.START.TIME, OUTAGE.RESTORATION.DATE, OUTAGE.RESTORATION.TIME, OUTAGE.DURATION, DEMAND.LOSS.MW, CAUSE.CATEGORY, CUSTOMERS.AFFECTED, CLIMATE.REGION, CLIMATE.CATEGORY, TOTAL.PRICE, TOTAL.SALES, TOTAL.CUSTOMERS, POPULATION, POPPCT_URBAN, POPPCT_UC, POPDEN_URBAN, POPDEN_UC, AREAPCT_URBAN, AREAPCT_UC, PCT_LAND, PCT_WATER_TOT, PCT_WATER_INLAND.
+
 2.  Next, we combine the OUTAGE.START.DATE and OUTAGE.START.TIME columns into a single OUTAGE.START column as a Timestamp object. We do the same for OUTAGE.RESTORATION.DATE and OUTAGE.RESTORATION.TIME, creating a OUTAGE.RESTORATION column. We then drop the old columns since all the relevant information is now contained in OUTAGE.START and OUTAGE.RESTORATION.
-3.  
+   
+3.  Next, we check our outcomes of interest, OUTAGE.DURATION, CUSTOMERS.AFFECTED, and DEMAND.LOSS.MW, for values of 0, which are likely indicative of missing values since major outages wouldn't have a duration of 0 minutes, 0 customers affected, or 0 MW of energy lost. We replace 0 values in these columns with np.nan.
+
+4.  We observed missing values in several columns: MONTH (9), OUTAGE.START.DATE (9), OUTAGE.START.TIME (9), OUTAGE.RESTORATION.DATE (58), OUTAGE.RESTORATION.TIME (58), CLIMATE.REGION (6), CLIMATE.CATEGORY (9), TOTAL.PRICE (22), TOTAL.SALES (22), and POPDEN_UC (10); To address these missing values, we first need to understand the missing mechanism behind them. This will involve determining if the missing values are missing completely at random (MCAR), missing at random (MAR), or missing not at random (MNAR). Once we understand the missing mechanism, we can use imputation techniques such as mean imputation, mode imputation, or more advanced methods like multiple imputation or predictive imputation to replace the missing values. We will explain these steps in more depth later in our analysis.  
 
 
