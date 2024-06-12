@@ -71,7 +71,7 @@ We examined the distributions of individual columns by using DataFrame operation
   height="600"
   frameborder="0"
 ></iframe>
-**The graph above shows the number of outages that occurred in each month provides valuable insights into the seasonal trends and patterns of power outages. By visualizing the monthly distribution of outages, we can identify whether certain times of the year are more prone to power disruptions.**
+**The graph above shows the number of outages that occurred in each month provides valuable insights into the seasonal trends and patterns of power outages. By visualizing the monthly distribution of outages, we can identify whether certain times of the year are more prone to power disruptions. The observation that summer months (specifically June to August) have more power outages is coulod be due to Infrastructure Strain, Weather Sensitivity, Resource Planning further analysis is required**
 
 
 <iframe
@@ -80,8 +80,17 @@ We examined the distributions of individual columns by using DataFrame operation
   height="600"
   frameborder="0"
 ></iframe>
-**The graph above shows the number of outages per cause category provides insights into the different reasons behind power outages and their frequency. Each bar represents the total number of outages caused by a specific category. By examining the height of the bars, we can identify which causes are more frequent.**
+**The graph above shows the number of outages per cause category provides insights into the different reasons behind power outages and their frequency. Each bar represents the total number of outages caused by a specific category. By examining the height of the bars, we can identify which causes are more frequent. The graph shows that severe weather is the highest cause of power outages. The high frequency of severe weather-related outages, as indicated by the graph, underscores the vulnerability of power infrastructure to natural disasters. This insight provides context for the higher distribution of power outages during the summer, as severe weather events are more common during this season.**
 
 
 ### Bivariate Analysis
-Explore relationships between pairs of columns in the dataset. 
+We explore the relationships between pairs of columns in the dataset and create relevant plots. 
+
+
+<iframe
+  src="assets/outagebycause.html"
+  width="700"
+  height="600"
+  frameborder="0"
+></iframe>
+**The plot above visualizes the relationship between outage duration (the time power is unavailable) and the cause category of the outage events. The plot indicates that outages categorized as "Fuel Supply Emergency" tend to have longer durations compared to other categories. This suggests that issues related to fuel supply emergencies are more complex or severe, leading to extended outages.**
