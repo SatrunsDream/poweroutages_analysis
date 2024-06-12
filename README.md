@@ -232,3 +232,5 @@ Our model aims to predict the duration of a power outage. This is a regression t
 
 At the time of prediction, we will have access to the following features: 
 These features will be used to predict the duration of the outage, providing valuable insights for outage management and planning.
+
+# Baseline Model
