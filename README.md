@@ -153,12 +153,12 @@ TOTAL.CUSTOMERS, representing the total number of customers served by the affect
 Understanding the reasons behind missing values in these columns is crucial for accurate data analysis and interpretation, as it can impact the reliability and completeness of the analysis results.
 
 ## Missingness Dependency
-To test missingness dependency, I examined the missingness of CAUSE.CATEGORY.DETAIL with respect to CLIMATE.REGION, as well as the day of the week of OUTAGE.START with respect to CLIMATE.REGION. 
+To test missingness dependency, I examined the missingness of CAUSE.CATEGORY.DETAIL with respect to CLIMATE.REGION, as well as the day of the week of OUTAGE.START.
 
-Examining the missingness of CAUSE.CATEGORY.DETAIL with respect to CLIMATE.REGION and the day of the week of OUTAGE.START with respect to CLIMATE.REGION is crucial for understanding data quality and patterns. Identifying systematic missingness helps pinpoint regions prone to incomplete data, informing improvements in data collection processes and reducing biases in analysis. This knowledge enhances imputation strategies and resource allocation, ensuring more accurate and representative results. 
+Examining the missingness of CAUSE.CATEGORY.DETAIL with respect to CLIMATE.REGION and the day of the week of OUTAGE.START is crucial for understanding data quality and patterns. Identifying systematic missingness helps pinpoint regions prone to incomplete data, informing improvements in data collection processes and reducing biases in analysis. This knowledge enhances imputation strategies and resource allocation, ensuring more accurate and representative results. 
 
 ### CAUSE.CATEGORY.DETAIL with respect to CLIMATE.REGION
-First, I examine the distribution of Cause Category Detail when the Cause Category is missing and not missing.
+First, we examine the distribution of Cause Category Detail when the Cause Category is missing and not missing.
 
 **Null Hypothesis:** The distribution of CLIMATE.REGION is the same when CAUSE.CATEGORY.DETAIL is missing vs not missing.
 
@@ -180,6 +180,20 @@ To assess the significance of the observed TVD, a permutation test was conducted
   frameborder="0"
 ></iframe>
 
+
+### CAUSE.CATEGORY.DETAIL with respect to OUTAGE.START
+Next, we examine the distribution of OUTAGE.START when the Cause Category is missing and not missing.
+
+**Null Hypothesis:** The distribution of OUTAGE.START is the same when CAUSE.CATEGORY.DETAIL is missing vs not missing.
+
+**Alternate Hypothesis:** The distribution of OUTAGE.STARTis different when CAUSE.CATEGORY.DETAIL is missing vs not missing.
+
+<iframe
+  src="assets/dayofweekmissignesscause.html"
+  width="700"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
 
