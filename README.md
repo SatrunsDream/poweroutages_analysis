@@ -141,7 +141,7 @@ We utilized pivot tables to extract insights on relationships between pairs of c
 
 # Assessment of Missingness
 
-##NMAR Analysis
+## NMAR Analysis
 Several columns in the dataset contain missing data, and one such column that is likely NMAR (Not Missing at Random) is CUSTOMERS.AFFECTED. The missingness in this column may be due to various reasons, including inaccurate reporting or recording of the number of affected customers. Large-scale outages, in particular, may pose challenges in accurately determining the exact number of affected customers. Additionally, the missingness could be influenced by the severity of the outage or the size of the affected area, as larger outages may be more challenging to assess accurately in terms of customer impact.
 
 Similarly, the column DEMAND.LOSS.MW may also have missing values, as measuring demand loss during outages can be complex, especially for outages affecting multiple regions or a large number of customers. CLIMATE.CATEGORY might have missing values if climate data for certain regions or periods is not available or not applicable. For example, some regions might not have well-defined climate categories due to geographical or climatic peculiarities, leading to missing values in this column.
@@ -151,3 +151,5 @@ TOTAL.PRICE and TOTAL.SALES could have missing values if cost and sales data, re
 TOTAL.CUSTOMERS, representing the total number of customers served by the affected area, might have missing values if the data is not recorded or not applicable. In some cases, it may be challenging to accurately determine the total number of customers served, especially in areas with fluctuating populations or complex utility infrastructure.
 
 Understanding the reasons behind missing values in these columns is crucial for accurate data analysis and interpretation, as it can impact the reliability and completeness of the analysis results.
+
+## Missingness Dependency
