@@ -186,7 +186,7 @@ Next, we examine the distribution of OUTAGE.START when the Cause Category is mis
 
 **Null Hypothesis:** The distribution of OUTAGE.START is the same when CAUSE.CATEGORY.DETAIL is missing vs not missing.
 
-**Alternate Hypothesis:** The distribution of OUTAGE.STARTis different when CAUSE.CATEGORY.DETAIL is missing vs not missing.
+**Alternate Hypothesis:** The distribution of OUTAGE.START is different when CAUSE.CATEGORY.DETAIL is missing vs not missing.
 
 <iframe
   src="assets/dayofweekmissignesscause.html"
