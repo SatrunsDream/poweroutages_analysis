@@ -59,3 +59,10 @@ The first step is to clean the data to ensure it is suitable for effective analy
 4.  We observed missing values in several columns: MONTH (9), OUTAGE.START.DATE (9), OUTAGE.START.TIME (9), OUTAGE.RESTORATION.DATE (58), OUTAGE.RESTORATION.TIME (58), CLIMATE.REGION (6), CLIMATE.CATEGORY (9), TOTAL.PRICE (22), TOTAL.SALES (22), and POPDEN_UC (10); To address these missing values, we first need to understand the missing mechanism behind them. This will involve determining if the missing values are missing completely at random (MCAR), missing at random (MAR), or missing not at random (MNAR). Once we understand the missing mechanism, we can use imputation techniques such as mean imputation, mode imputation, or more advanced methods like multiple imputation or predictive imputation to replace the missing values. We will explain these steps in more depth later in our analysis.  
 
 ## Exploring Data
+In this step, we perform both univariate and bivariate analyses to understand the distribution and relationships of our data, as well as examine interesting aggregates
+
+### Univariate Analysis
+
+We examined the distributions of individual columns by using DataFrame operations and creating relevant plots. 
+
+<rect class="nsewdrag drag" data-subplot="xy" x="80" y="100" width="624" height="345" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect>
