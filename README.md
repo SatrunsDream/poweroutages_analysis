@@ -122,5 +122,34 @@ We utilized pivot tables to extract insights on relationships between pairs of c
 | West               | 1390257.0         | 0.0                   | 239020.0           | 131019.0  | 0.0           | 20579360.0     | 3344890.0                      | 25684546.0   |
 | West North Central | 0.0               | 0.0                   | 0.0                | 0.0       | 34500.0       | 296712.0       | NaN                            | 331212.0     |
 | **Total**          | 3043794.0         | 1.0                   | 356315.0           | 209749.0  | 159994.0      | 134501247.0    | 17489180.0                     | 155760280.0  |
+<table style="border-collapse: collapse; border: 2px solid black;">
+  <thead>
+    <tr>
+      <th>CAUSE.CATEGORY</th>
+      <th>equipment failure</th>
+      <th>fuel supply emergency</th>
+      <th>intentional attack</th>
+      <th>islanding</th>
+      <th>public appeal</th>
+      <th>severe weather</th>
+      <th>system operability disruption</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Central</td>
+      <td>175500.0</td>
+      <td>0.0</td>
+      <td>2325.0</td>
+      <td>29000.0</td>
+      <td>0.0</td>
+      <td>18439625.0</td>
+      <td>1262700.0</td>
+      <td>19909150.0</td>
+    </tr>
+    <!-- Add more rows here -->
+  </tbody>
+</table>
 
 **The table provides a comprehensive overview of the number of outages categorized by their causes and climate regions. It allows us to quickly compare the frequency of different outage causes across various climate regions. For instance, we can see that severe weather is the most common cause in most regions, except for the Southeast where it is intentional attack. This highlights the regional variations in outage causes, which can be crucial for infrastructure planning and risk management.**
