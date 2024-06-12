@@ -65,20 +65,20 @@ In this step, we perform both univariate and bivariate analyses to understand th
 
 We examined the distributions of individual columns by using DataFrame operations and creating relevant plots. 
 
-Number of outages that occurred in each month provides valuable insights into the seasonal trends and patterns of power outages. By visualizing the monthly distribution of outages, we can identify whether certain times of the year are more prone to power disruptions.
 <iframe
   src="assets/monthly_outages.html"
   width="700"
   height="600"
   frameborder="0"
 ></iframe>
+**The graph above of monthly outaages shows the umber of outages that occurred in each month provides valuable insights into the seasonal trends and patterns of power outages. By visualizing the monthly distribution of outages, we can identify whether certain times of the year are more prone to power disruptions.**
 
 
-Number of outages per cause category provides insights into the different reasons behind power outages and their frequency. Each bar represents the total number of outages caused by a specific category. By examining the height of the bars, we can identify which causes are more frequent. 
 <iframe
   src="assets/cause_outages.html"
   width="700"
   height="600"
   frameborder="0"
 ></iframe>
+**The graph above of outages per cause category shows the number of outages per cause category provides insights into the different reasons behind power outages and their frequency. Each bar represents the total number of outages caused by a specific category. By examining the height of the bars, we can identify which causes are more frequent. **
 
