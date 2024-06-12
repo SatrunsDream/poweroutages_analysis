@@ -84,7 +84,8 @@ We examined the distributions of individual columns by using DataFrame operation
 
 
 ### Bivariate Analysis
-We explore the relationships between pairs of columns in the dataset and create relevant plots. 
+
+We explored the relationships between pairs of columns in the dataset and create relevant plots. 
 
 
 <iframe
@@ -103,3 +104,21 @@ We explore the relationships between pairs of columns in the dataset and create 
   frameborder="0"
 ></iframe>
 **The plot above visualizes the relationship between outage duration across different climate regions. It helps identify how outage durations vary geographically, providing insights into regional infrastructure resilience and vulnerability. The East North Central and Northeast West regions have the largest bins, indicating that these regions experience a wide range of outage durations. The East North Central region, in particular, shows a significant spread of outliers, suggesting that this region occasionally experiences very long outage durations compared to other regions. This could be due to various factors such as infrastructure vulnerabilities, weather patterns, or other region-specific conditions.**
+
+
+### Grouping and Aggregates
+We utilized pivot tables to extract insights on relationships between pairs of columns in the dataset, aiming to uncover correlations and dependencies.
+
+| CAUSE.CATEGORY     | equipment failure | fuel supply emergency | intentional attack | islanding | public appeal | severe weather | system operability disruption | Total        |
+|--------------------|-------------------|-----------------------|--------------------|-----------|---------------|----------------|--------------------------------|--------------|
+| **CLIMATE.REGION** |                   |                       |                    |           |               |                |                                |              |
+| Central            | 175500.0          | 0.0                   | 2325.0             | 29000.0   | 0.0           | 18439625.0     | 1262700.0                      | 19909150.0   |
+| East North Central | 0.0               | 0.0                   | 5941.0             | 0.0       | 7600.0        | 14037140.0     | 2279213.0                      | 16329894.0   |
+| Northeast          | 114303.0          | 1.0                   | 85502.0            | 0.0       | 55800.0       | 28470445.0     | 3715312.0                      | 32441363.0   |
+| Northwest          | 93303.0           | 0.0                   | 2500.0             | 0.0       | 8000.0        | 4909237.0      | 35000.0                        | 5048040.0    |
+| South              | 376330.0          | 0.0                   | 12514.0            | 14500.0   | 54094.0       | 23216039.0     | 4769143.0                      | 28442620.0   |
+| Southeast          | 727101.0          | NaN                   | 0.0                | NaN       | 0.0           | 23956720.0     | 1133333.0                      | 25817154.0   |
+| Southwest          | 167000.0          | 0.0                   | 8513.0             | 35230.0   | 0.0           | 595969.0       | 949589.0                       | 1756301.0    |
+| West               | 1390257.0         | 0.0                   | 239020.0           | 131019.0  | 0.0           | 20579360.0     | 3344890.0                      | 25684546.0   |
+| West North Central | 0.0               | 0.0                   | 0.0                | 0.0       | 34500.0       | 296712.0       | NaN                            | 331212.0     |
+| **Total**          | 3043794.0         | 1.0                   | 356315.0           | 209749.0  | 159994.0      | 134501247.0    | 17489180.0                     | 155760280.0  |
