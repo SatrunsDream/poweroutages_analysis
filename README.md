@@ -65,4 +65,9 @@ In this step, we perform both univariate and bivariate analyses to understand th
 
 We examined the distributions of individual columns by using DataFrame operations and creating relevant plots. 
 
-fig.write_html('monthly_outages.html', include_plotlyjs='cdn')
+<iframe
+  src="assets/monthly_outages.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
