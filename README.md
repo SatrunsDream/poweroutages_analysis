@@ -205,4 +205,17 @@ To test the dependency of missingness in CAUSE.CATEGORY.DETAIL with respect to O
 ></iframe>
 
 
+# Hypothesis Testing
 
+## Test I
+We aim to determine if there is a significant difference in the duration of power outages caused by severe weather compared to those not caused by severe weather. Specifically, whether the average duration of outages due to severe weather is significantly longer than those caused by other factors.
+
+**Null Hypothesis:** The distribution of outage durations is the same regardless of whether the cause is severe weather or not. In other words, outages caused by severe weather and those not caused by severe weather come from the same distribution.
+
+**Alternate Hypothesis:** The distribution of outage durations differs based on the cause, with outages caused by severe weather lasting longer on average than those not caused by severe weather.
+
+**Test Statistic:** The difference in means between the duration of outages caused by severe weather and those not caused by severe weather.
+
+To test if there's a difference in outage duration between severe weather-related outages and those not caused by severe weather, we first created a DataFrame with columns 'CAUSE.CATEGORY' and 'OUTAGE.DURATION'. We then added a column 'is_weather' indicating if the outage was caused by severe weather. The test statistic used was the difference in mean outage duration between severe weather and non-severe weather outages. We shuffled the 'is_weather' column 10,000 times and calculated the difference in mean outage duration each time. The p-value, which indicates the likelihood of observing a difference as extreme as the one in our data under the null hypothesis, was 0.0. This suggests strong evidence to reject the null hypothesis and conclude that severe weather-related outages have a significantly longer duration on average compared to those not caused by severe weather.
+
+##Test II
