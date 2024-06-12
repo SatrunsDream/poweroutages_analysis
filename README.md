@@ -218,4 +218,11 @@ We aim to determine if there is a significant difference in the duration of powe
 
 To test if there's a difference in outage duration between severe weather-related outages and those not caused by severe weather, we first created a DataFrame with columns 'CAUSE.CATEGORY' and 'OUTAGE.DURATION'. We then added a column 'is_weather' indicating if the outage was caused by severe weather. The test statistic used was the difference in mean outage duration between severe weather and non-severe weather outages. We shuffled the 'is_weather' column 10,000 times and calculated the difference in mean outage duration each time. The p-value, which indicates the likelihood of observing a difference as extreme as the one in our data under the null hypothesis, was 0.0. This suggests strong evidence to reject the null hypothesis and conclude that severe weather-related outages have a significantly longer duration on average compared to those not caused by severe weather.
 
+<iframe
+  src="assets/differencesinOUTAGE.DURATION.html"
+  width="700"
+  height="600"
+  frameborder="0"
+></iframe>
+
 ##Test II
