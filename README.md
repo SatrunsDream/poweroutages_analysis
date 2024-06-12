@@ -122,3 +122,5 @@ We utilized pivot tables to extract insights on relationships between pairs of c
 | West               | 1390257.0         | 0.0                   | 239020.0           | 131019.0  | 0.0           | 20579360.0     | 3344890.0                      | 25684546.0   |
 | West North Central | 0.0               | 0.0                   | 0.0                | 0.0       | 34500.0       | 296712.0       | NaN                            | 331212.0     |
 | **Total**          | 3043794.0         | 1.0                   | 356315.0           | 209749.0  | 159994.0      | 134501247.0    | 17489180.0                     | 155760280.0  |
+
+**The table provides a comprehensive overview of the number of outages categorized by their causes and climate regions. It allows us to quickly compare the frequency of different outage causes across various climate regions. For instance, we can see that severe weather is the most common cause in most regions, except for the Southeast where it is intentional attack. This highlights the regional variations in outage causes, which can be crucial for infrastructure planning and risk management.**
