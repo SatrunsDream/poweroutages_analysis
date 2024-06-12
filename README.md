@@ -109,22 +109,34 @@ We explored the relationships between pairs of columns in the dataset and create
 ### Grouping and Aggregates
 We utilized pivot tables to extract insights on relationships between pairs of columns in the dataset, aiming to uncover correlations and dependencies.
 
-| CAUSE.CATEGORY     | equipment failure | fuel supply emergency | intentional attack | islanding | public appeal | severe weather | system operability disruption | Total        |
-|--------------------|-------------------|-----------------------|--------------------|-----------|---------------|----------------|--------------------------------|--------------|
-| **CLIMATE.REGION** |                   |                       |                    |           |               |                |                                |              |
-| Central            | 175500.0          | 0.0                   | 2325.0             | 29000.0   | 0.0           | 18439625.0     | 1262700.0                      | 19909150.0   |
-| East North Central | 0.0               | 0.0                   | 5941.0             | 0.0       | 7600.0        | 14037140.0     | 2279213.0                      | 16329894.0   |
-| Northeast          | 114303.0          | 1.0                   | 85502.0            | 0.0       | 55800.0       | 28470445.0     | 3715312.0                      | 32441363.0   |
-| Northwest          | 93303.0           | 0.0                   | 2500.0             | 0.0       | 8000.0        | 4909237.0      | 35000.0                        | 5048040.0    |
-| South              | 376330.0          | 0.0                   | 12514.0            | 14500.0   | 54094.0       | 23216039.0     | 4769143.0                      | 28442620.0   |
-| Southeast          | 727101.0          | NaN                   | 0.0                | NaN       | 0.0           | 23956720.0     | 1133333.0                      | 25817154.0   |
-| Southwest          | 167000.0          | 0.0                   | 8513.0             | 35230.0   | 0.0           | 595969.0       | 949589.0                       | 1756301.0    |
-| West               | 1390257.0         | 0.0                   | 239020.0           | 131019.0  | 0.0           | 20579360.0     | 3344890.0                      | 25684546.0   |
-| West North Central | 0.0               | 0.0                   | 0.0                | 0.0       | 34500.0       | 296712.0       | NaN                            | 331212.0     |
-| **Total**          | 3043794.0         | 1.0                   | 356315.0           | 209749.0  | 159994.0      | 134501247.0    | 17489180.0                     | 155760280.0  |
+| CAUSE.CATEGORY     | equipment failure | fuel supply emergency | intentional attack | islanding | public appeal | severe weather | system operability disruption |
+|--------------------|-------------------|-----------------------|--------------------|-----------|---------------|----------------|--------------------------------|
+| **CLIMATE.REGION** |                   |                       |                    |           |               |                |                                |
+| Central            | 175500.0          | 0.0                   | 2325.0             | 29000.0   | 0.0           | 18439625.0     | 1262700.0                      |
+| East North Central | 0.0               | 0.0                   | 5941.0             | 0.0       | 7600.0        | 14037140.0     | 2279213.0                      |
+| Northeast          | 114303.0          | 1.0                   | 85502.0            | 0.0       | 55800.0       | 28470445.0     | 3715312.0                      |
+| Northwest          | 93303.0           | 0.0                   | 2500.0             | 0.0       | 8000.0        | 4909237.0      | 35000.0                        |
+| South              | 376330.0          | 0.0                   | 12514.0            | 14500.0   | 54094.0       | 23216039.0     | 4769143.0                      |
+| Southeast          | 727101.0          | NaN                   | 0.0                | NaN       | 0.0           | 23956720.0     | 1133333.0                      |
+| Southwest          | 167000.0          | 0.0                   | 8513.0             | 35230.0   | 0.0           | 595969.0       | 949589.0                       |
+| West               | 1390257.0         | 0.0                   | 239020.0           | 131019.0  | 0.0           | 20579360.0     | 3344890.0                      |
+| West North Central | 0.0               | 0.0                   | 0.0                | 0.0       | 34500.0       | 296712.0       | NaN                            |
+| **Total**          | 3043794.0         | 1.0                   | 356315.0           | 209749.0  | 159994.0      | 134501247.0    | 17489180.0                     |
 
 
 **The table provides a comprehensive overview of the number of outages categorized by their causes and climate regions. It allows us to quickly compare the frequency of different outage causes across various climate regions. For instance, we can see that severe weather is the most common cause in most regions, except for the Southeast where it is intentional attack. This highlights the regional variations in outage causes, which can be crucial for infrastructure planning and risk management.**
 
+| CAUSE.CATEGORY               | Central     | East North Central | Northeast   | Northwest  | South      | Southeast  | Southwest  | West       | West North Central |
+|------------------------------|-------------|--------------------|-------------|------------|------------|------------|------------|------------|--------------------|
+| equipment failure            | 175500.0    | 0.0                | 114303.0    | 93303.0    | 376330.0   | 727101.0   | 167000.0   | 1390257.0  | 0.0                |
+| fuel supply emergency        | 0.0         | 0.0                | 1.0         | 0.0        | 0.0        | NaN        | 0.0        | 0.0        | 0.0                |
+| intentional attack           | 2325.0      | 5941.0             | 85502.0     | 2500.0     | 12514.0    | 0.0        | 8513.0     | 239020.0   | 0.0                |
+| islanding                    | 29000.0     | 0.0                | 0.0         | 0.0        | 14500.0    | NaN        | 35230.0    | 131019.0   | 0.0                |
+| public appeal                | 0.0         | 7600.0             | 55800.0     | 8000.0     | 54094.0    | 0.0        | 0.0        | 0.0        | 34500.0            |
+| severe weather               | 18439625.0  | 14037140.0         | 28470445.0  | 4909237.0  | 23216039.0 | 23956720.0 | 595969.0   | 20579360.0 | 296712.0           |
+| system operability disruption| 1262700.0   | 2279213.0          | 3715312.0   | 35000.0    | 4769143.0  | 1133333.0  | 949589.0   | 3344890.0  | NaN                |
+
+
+**The table provides a breakdown of the number of customers affected by different causes of outages across various climate regions. It can help identify patterns and trends in outage causes and impacts across different regions. It offers a quick comparison of outage causes across different climate regions. Severe weather emerges as the predominant cause in several regions, such as Central, Northeast, South, and West. Interestingly, intentional attacks appear as the primary cause in the Southeast region, deviating from the pattern observed in other regions. This discrepancy underscores the regional variations in outage causes, emphasizing the importance of region-specific infrastructure planning and risk management strategies.**
 
 # Assessment of Missingness
