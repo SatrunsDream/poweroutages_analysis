@@ -73,7 +73,7 @@ We examined the distributions of individual columns by using DataFrame operation
 ></iframe>
 
 <iframe
-  src="assets/cause_outages.html.html"
+  src="assets/cause_outages.html"
   width="700"
   height="600"
   frameborder="0"
