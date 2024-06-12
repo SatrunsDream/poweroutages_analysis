@@ -140,3 +140,14 @@ We utilized pivot tables to extract insights on relationships between pairs of c
 **The table provides a breakdown of the number of customers affected by different causes of outages across various climate regions. It can help identify patterns and trends in outage causes and impacts across different regions. It offers a quick comparison of outage causes across different climate regions. Severe weather emerges as the predominant cause in several regions, such as Central, Northeast, South, and West. Interestingly, intentional attacks appear as the primary cause in the Southeast region, deviating from the pattern observed in other regions. This discrepancy underscores the regional variations in outage causes, emphasizing the importance of region-specific infrastructure planning and risk management strategies.**
 
 # Assessment of Missingness
+
+##NMAR Analysis
+Several columns in the dataset contain missing data, and one such column that is likely NMAR (Not Missing at Random) is CUSTOMERS.AFFECTED. The missingness in this column may be due to various reasons, including inaccurate reporting or recording of the number of affected customers. Large-scale outages, in particular, may pose challenges in accurately determining the exact number of affected customers. Additionally, the missingness could be influenced by the severity of the outage or the size of the affected area, as larger outages may be more challenging to assess accurately in terms of customer impact.
+
+Similarly, the column DEMAND.LOSS.MW may also have missing values, as measuring demand loss during outages can be complex, especially for outages affecting multiple regions or a large number of customers. CLIMATE.CATEGORY might have missing values if climate data for certain regions or periods is not available or not applicable. For example, some regions might not have well-defined climate categories due to geographical or climatic peculiarities, leading to missing values in this column.
+
+TOTAL.PRICE and TOTAL.SALES could have missing values if cost and sales data, respectively, are not calculated or documented for certain outages. Factors such as incomplete record-keeping, reporting errors, or the absence of standardized procedures for calculating these values could contribute to missingness in these columns.
+
+TOTAL.CUSTOMERS, representing the total number of customers served by the affected area, might have missing values if the data is not recorded or not applicable. In some cases, it may be challenging to accurately determine the total number of customers served, especially in areas with fluctuating populations or complex utility infrastructure.
+
+Understanding the reasons behind missing values in these columns is crucial for accurate data analysis and interpretation, as it can impact the reliability and completeness of the analysis results.
