@@ -125,3 +125,6 @@ We utilized pivot tables to extract insights on relationships between pairs of c
 
 
 **The table provides a comprehensive overview of the number of outages categorized by their causes and climate regions. It allows us to quickly compare the frequency of different outage causes across various climate regions. For instance, we can see that severe weather is the most common cause in most regions, except for the Southeast where it is intentional attack. This highlights the regional variations in outage causes, which can be crucial for infrastructure planning and risk management.**
+
+
+# Assessment of Missingness
