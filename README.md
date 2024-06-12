@@ -94,3 +94,12 @@ We explore the relationships between pairs of columns in the dataset and create 
   frameborder="0"
 ></iframe>
 **The plot above visualizes the relationship between outage duration (the time power is unavailable) and the cause category of the outage events. The plot indicates that outages categorized as "Fuel Supply Emergency" tend to have longer durations compared to other categories. This suggests that issues related to fuel supply emergencies are more complex or severe, leading to extended outages.**
+
+
+<iframe
+  src="assets/outagebyregion.html"
+  width="700"
+  height="600"
+  frameborder="0"
+></iframe>
+**The plot above visualizes the relationship between outage duration across different climate regions. It helps identify how outage durations vary geographically, providing insights into regional infrastructure resilience and vulnerability. The East North Central and Northeast West regions have the largest bins, indicating that these regions experience a wide range of outage durations. The East North Central region, in particular, shows a significant spread of outliers, suggesting that this region occasionally experiences very long outage durations compared to other regions. This could be due to various factors such as infrastructure vulnerabilities, weather patterns, or other region-specific conditions.**
