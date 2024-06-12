@@ -67,7 +67,7 @@ We examined the distributions of individual columns by using DataFrame operation
 
 <iframe
   src="assets/monthly_outages.html"
-  width="800"
+  width="700"
   height="600"
   frameborder="0"
 ></iframe>
