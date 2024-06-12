@@ -153,11 +153,11 @@ TOTAL.CUSTOMERS, representing the total number of customers served by the affect
 Understanding the reasons behind missing values in these columns is crucial for accurate data analysis and interpretation, as it can impact the reliability and completeness of the analysis results.
 
 ## Missingness Dependency
-To test missingness dependency, I examined the missingness of CAUSE.CATEGORY.DETAIL with respect to CAUSE.CATEGORY, as well as CLIMATE.REGION. 
+To test missingness dependency, I examined the missingness of CAUSE.CATEGORY.DETAIL with respect to CLIMATE.REGION, as well as the day of the week of OUTAGE.START with respect to CLIMATE.REGION. 
 
-Testing missingness dependency between CAUSE.CATEGORY.DETAIL and CAUSE.CATEGORY is useful because it helps us understand if the missingness of CAUSE.CATEGORY.DETAIL is related to the type of cause category. If there is a dependency, it could indicate systematic reasons behind the missing values, which could provide insights into the data collection process or the nature of the outages themselves. For example, if certain categories of outages are more likely to have missing CAUSE.CATEGORY.DETAIL, it could suggest that the cause details are harder to ascertain for those types of outages, which could have implications for how outage data is collected and recorded. Understanding these dependencies can lead to more informed data analysis and potentially improve the accuracy and completeness of the dataset.
+Examining the missingness of CAUSE.CATEGORY.DETAIL with respect to CLIMATE.REGION and the day of the week of OUTAGE.START with respect to CLIMATE.REGION is crucial for understanding data quality and patterns. Identifying systematic missingness helps pinpoint regions prone to incomplete data, informing improvements in data collection processes and reducing biases in analysis. This knowledge enhances imputation strategies and resource allocation, ensuring more accurate and representative results. 
 
-### Cause Category
+### CAUSE.CATEGORY.DETAIL with respect to CLIMATE.REGION
 First, I examine the distribution of Cause Category Detail when the Cause Category is missing and not missing.
 
 **Null Hypothesis:** The distribution of CLIMATE.REGION is the same when CAUSE.CATEGORY.DETAIL is missing vs not missing.
@@ -170,6 +170,16 @@ First, I examine the distribution of Cause Category Detail when the Cause Catego
   height="600"
   frameborder="0"
 ></iframe>
+
+To assess the significance of the observed TVD, a permutation test was conducted. This involved shuffling the CLIMATE.REGION labels 10,000 times and recalculating the TVD for each shuffle. The proportion of permuted TVDs greater than or equal to the observed TVD gave the p-value. The results of the permutation test yielded a p-value of 0.0, indicating that the observed difference in the distribution of CLIMATE.REGION when CAUSE.CATEGORY.DETAIL is missing versus not missing is highly unlikely to have occurred by chance. Given the p-value of 0.0, we reject the null hypothesis. This suggests that the distribution of CLIMATE.REGION is indeed different when CAUSE.CATEGORY.DETAIL is missing compared to when it is not missing, implying that the missingness of CAUSE.CATEGORY.DETAIL is not completely at random but is related to CLIMATE.REGION.
+
+<iframe
+  src="assets/climateregionbymissingnesstvd.html"
+  width="700"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 
 
