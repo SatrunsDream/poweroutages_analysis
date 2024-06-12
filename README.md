@@ -82,3 +82,6 @@ We examined the distributions of individual columns by using DataFrame operation
 ></iframe>
 **The graph above shows the number of outages per cause category provides insights into the different reasons behind power outages and their frequency. Each bar represents the total number of outages caused by a specific category. By examining the height of the bars, we can identify which causes are more frequent.**
 
+
+### Bivariate Analysis
+Explore relationships between pairs of columns in the dataset. 
