@@ -65,25 +65,4 @@ In this step, we perform both univariate and bivariate analyses to understand th
 
 We examined the distributions of individual columns by using DataFrame operations and creating relevant plots. 
 
-<bound method BaseFigure.write_html of Figure({
-    'data': [{'alignmentgroup': 'True',
-              'hovertemplate': 'MONTH=%{x}<br>count=%{y}<extra></extra>',
-              'legendgroup': '',
-              'marker': {'color': '#636efa', 'pattern': {'shape': ''}},
-              'name': '',
-              'offsetgroup': '',
-              'orientation': 'v',
-              'showlegend': False,
-              'textposition': 'auto',
-              'type': 'bar',
-              'x': array([7, 5, 10, ..., 8, 8, nan], dtype=object),
-              'xaxis': 'x',
-              'y': array([1, 1, 1, ..., 1, 1, 1], dtype=int64),
-              'yaxis': 'y'}],
-    'layout': {'barmode': 'relative',
-               'legend': {'tracegroupgap': 0},
-               'template': '...',
-               'title': {'text': 'Monthly Outages'},
-               'xaxis': {'anchor': 'y', 'domain': [0.0, 1.0], 'title': {'text': 'Month'}},
-               'yaxis': {'anchor': 'x', 'domain': [0.0, 1.0], 'title': {'text': 'Number of Outages'}}}
-})>
+fig.write_html('monthly_outages.html', include_plotlyjs='cdn')
