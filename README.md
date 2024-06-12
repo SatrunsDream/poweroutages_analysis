@@ -226,3 +226,9 @@ To test if there's a difference in outage duration between severe weather-relate
 ></iframe>
 
 ##Test II
+
+# Framing a Prediction Problem
+Our model aims to predict the duration of a power outage. This is a regression task, as we are predicting a continuous numerical value. The metric we will use to evaluate our model's performance is the Mean Absolute Error (MAE), as it provides a clear interpretation of the average error magnitude.
+
+At the time of prediction, we will have access to the following features: 
+These features will be used to predict the duration of the outage, providing valuable insights for outage management and planning.
