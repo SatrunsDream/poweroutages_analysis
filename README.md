@@ -88,7 +88,7 @@ We explore the relationships between pairs of columns in the dataset and create 
 
 
 <iframe
-  src="assets/outagesbycause.html"
+  src="assets/outagebycause.html"
   width="700"
   height="600"
   frameborder="0"
