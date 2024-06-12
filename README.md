@@ -71,3 +71,11 @@ We examined the distributions of individual columns by using DataFrame operation
   height="600"
   frameborder="0"
 ></iframe>
+
+<iframe
+  src="assets/cause_outages.html.html"
+  width="700"
+  height="600"
+  frameborder="0"
+></iframe>
+
