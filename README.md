@@ -234,3 +234,15 @@ At the time of prediction, we will have access to the following features:
 These features will be used to predict the duration of the outage, providing valuable insights for outage management and planning.
 
 # Baseline Model
+Our model aims to predict the duration of a power outage. This is a regression task, as we are predicting a continuous numerical value. The metric we will use to evaluate our model’s performance is the Mean Absolute Error (MAE), as it provides a clear interpretation of the average error magnitude.
+
+At the time of prediction, we will have access to the following features: CAUSE.CATEGORY, NERC.REGION, and YEAR. These features will be used to predict the duration of the outage, providing valuable insights for outage management and planning.
+
+To build the model, we used a pipeline that first applied one-hot encoding to the categorical features ('CAUSE.CATEGORY', 'NERC.REGION', 'YEAR') and then used a linear regression model to predict the outage duration. Here's the process in detail:
+
+Preprocessing: We created a column transformer to one-hot encode the categorical features while passing through the remaining features.
+Pipeline: We constructed a pipeline with the preprocessing step followed by a linear regression model.
+Data Splitting: We split the dataset into training and test sets using an 80-20 split.
+Model Training: We trained the model on the training set.
+Model Evaluation: We evaluated the model on the test set.
+The model's R-squared score on the training data was 0.1723, indicating that the model explains approximately 17.23% of the variance in outage duration based on the given features. While this score suggests that the model captures some relationship between the features and the target variable, there is still substantial room for improvement.
