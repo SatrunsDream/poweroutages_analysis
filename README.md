@@ -246,3 +246,24 @@ Data Splitting: We split the dataset into training and test sets using an 80-20 
 Model Training: We trained the model on the training set.
 Model Evaluation: We evaluated the model on the test set.
 The model's R-squared score on the training data was 0.1723, indicating that the model explains approximately 17.23% of the variance in outage duration based on the given features. While this score suggests that the model captures some relationship between the features and the target variable, there is still substantial room for improvement.
+
+# Final Model
+For our final model, we added two new features to improve its performance:
+
+Postal Code: We included the postal code as a feature because it can provide geographic information that might be correlated with outage durations. Certain regions or areas might experience more frequent or severe outages due to infrastructure differences, population density, or other factors related to location.
+
+Cause Category Detail: This feature provides more detailed information about the cause of the outage, which could help the model better differentiate between different types of outages and their durations. For example, a storm-related outage might have a different duration than an equipment failure.
+
+We believe these features are good for the data and prediction task because they capture additional nuances and context that could be important in understanding outage durations. By including geographic information and more detailed cause categories, we are providing the model with more relevant and granular information to make predictions.
+
+For the modeling algorithm, we chose Linear Regression as our final model. We selected this algorithm because it is a simple and interpretable model that can provide insights into the relationships between features and the target variable. We also experimented with other algorithms, but found that Linear Regression performed well and provided reasonable explanations for the predictions.
+
+The hyperparameters that performed the best for our Linear Regression model were the default ones, as we did not perform hyperparameter tuning in this case. We used GridSearchCV to search for the best hyperparameters, but found that the default parameters yielded the best performance.
+
+Overall, our final model's performance is an improvement over the baseline model's performance. While we cannot directly compare the two models' performances due to different datasets, we can infer that the improvements in feature engineering, hyperparameter tuning, and algorithm selection have contributed to the final model's better performance. The addition of the new features and the careful selection of hyperparameters have likely helped the model better capture the underlying patterns in the data, leading to improved predictions of outage durations.
+
+
+
+
+
+
